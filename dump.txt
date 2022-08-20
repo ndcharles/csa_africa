@@ -1,0 +1,67 @@
+http://rightfootin.blogspot.com/2006/09/more-on-python-flatten.html
+
+Programming paradigms
+(see day 3)
+one of the benefits i got,and one of the reasons i attended the csa africa 2022 programme was to see how people use pythin outside core data science. I wanted to undersatnd programming with python as a software developer would. 
+
+You see, each time i check people who easily blend and thrive in ML, they are usually those with software background, so i decided to get one. Thanks to csa africa, it came at almost 0 cost.
+
+Up until now, I have written programmes around functions. You know, block of statements which manipulate data. This is what is called procedural programming. You can read something more indepth here.
+
+The other way of organising programmes is the object oriented programming paradigm. It involves combining data and functionality and wrapping it inside something called an object.
+
+When writing large programmes, like the scikit learn package, it is better to use an object oriented technique.
+
+classes and objects are the two main aspects of oop. Whereas a class creates a new type, objects are instances of the class.
+
+Class:
+Objects:
+Instance:
+ 
+
+The python errors
+* syntax errors (braces, etc)
+* exception errors (valueError, nameError)
+* semantic error (when everything else is ok but not worjing the way you want)
+
+
+
+
+
+
+
+data collection and cleaning
+- data was collected online at the url: https://github.com/Raghavagr/Laptop_Price_Prediction/blob/main/laptop_data.csv
+
+
+
+hyperparameter tuning
+- what parameters are to be tuned? for catoost and xgboost regressor 
+- how we got the best? we used gridsearchCV and ended up with the parameters used 
+
+
+param to tune for them bcos they are based on decision trees 
+- number of trees
+- learning rate 
+- tree depth
+ 
+
+
+what we did to tune?
+- dropped the weight feature since weight does not affect the price of a laptop
+- scaled down the numeric inputs [by taking the log of values] to minimise outliers
+- performed feature_importances_ at the end. the order of features affecting our model 
+- 
+
+
+why catboost?
+- ensemle method with internal methods to help improve model output 
+- internal OHE
+- creating xgboost regressor required much more complex process which time didn't allow us to optimise so we settled for the path of elast resistance.
+- It is friendly to newer inputs for prediction 
+
+
+Limitations
+- catboost tends to have too many parameters which can end up affecting the model's output.
+- there was not enough datasets to help us tune the model further 
+- not enough knowledge on model 
